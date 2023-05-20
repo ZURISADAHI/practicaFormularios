@@ -1,0 +1,272 @@
+<!--Específica que va a inicir el documento HTML y permite que el navegador entienda la versión-->
+<!DOCTYPE html>
+<!--Se incluye el atributo lang dentro de la etiqueta <html> para declarar el idioma de la página web-->
+<html lang="en">
+
+<!--Contiene información acerca del documento-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Define el título del documento y se muestra en la barra o pestaña del navegador-->
+    <title>Formulario Cafetería JAZ</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/estilos.css" />
+</head>
+<!--Empieza el contenido del documento-->
+<body>
+    <!--id nos permite identificar el elemento, posteriomente utilizarlos en CSS-->
+    <div id="contenido" class="section">
+        <!--div class permite agrupara los elementos del bloque y identificarlos en CSS-->
+        <div class="section-center">
+            <!--Permite crear la clase container, este mismo nos permite adaptar el formulario
+                 al ancho de la pantalla -->
+            <div class="container">}
+                <!--El row nos permite crea una fila en el apartado TITULO-->
+                <div class="row">
+                    <!--En div class se crea la clase contenido-form para mandarla a llamar 
+                        en los estilos de CSS-->
+                    <div class="contenido-form">
+                        <!--Título-->
+                        <!--Se crea div id titulo y posteriormente llamarlo y modificarlo
+                             en los estilos CSS-->
+                        <div id="titulo">
+                            <!--Se crea la clase form-header y posteriormente centrarlo y
+                                 asignarle un margen en los estilos CSS-->
+                            <div class="form-header">
+                                <!--h1 es elemento de titulo y i nos permite hacer la letra en cursiva-->
+                                <h1><i>Cafetería ¡Pasale, pasale!</i></h1>
+                            </div><!--se cierra la clase form-header-->
+                        </div><!--cierra el div id titulo-->
+                        <!--Se inicializa el formulario utilizando el método POST el cual nos permite ocultar la 
+                        información del cliente/usuario-->
+                        <form action="parametro.php" method="POST">
+                            <!--Primera fila, con nombre y número telefónico-->
+                            <div class="row">
+                                <!--Nombre-->
+                                <!--Se crean las columnas de nombre-->
+                                <div class="col-sm-6">
+                                    <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Nombre</span><!--Se cierra el contenedor de linea-->
+                                        <!--input especifica un campo de entrada donde el usuario puede ingresar datos
+                                        y placeholder es una indicación para el usuario-->
+                                        <input class="form-control" type="text" name="nombre"
+                                            placeholder="Introduzca su nombre">
+                                    </div><!--Se cierra el diseño-->
+                                </div><!--Finaliza la columna-->
+                                <!--Número telefónico-->
+                                <div class="col-sm-6">
+                                    <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Número telefónico</span>
+                                        <!--input especifica un campo de entrada donde el usuario puede ingresar datos
+                                        y placeholder es una indicación para el usuario-->
+                                        <input class="form-control" type="tel" name="telefono"
+                                            placeholder="Introduzca su número telefónico">
+                                    </div><!--Se cierra el diseño-->
+                                </div><!--Finaliza la columna-->
+                            </div><!--Finaliza la fila-->
+                            <!--Segunda fila con el correo electrónico-->
+                            <div class="row">
+                                <!--Se crean 12 columnas para el apartado de correo electrónico-->
+                                <div class="col-sm-12">
+                                    <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Correo electrónico</span>
+                                        <!--input especifica un campo de entrada donde el usuario puede ingresar datos
+                                        y placeholder es una indicación para el usuario y required indica al usuario
+                                    que el campo es obligatorio-->
+                                        <input class="form-control" type="email" name="correo"
+                                            placeholder="Introduzca su correo electrónico" required>
+                                    </div><!--Se cierra el diseño-->
+                                </div><!--FInalizacion de la columna-->
+                            </div><!--Finaliza la fila-->
+                            <!--Tercer fila con número de personas y número de mesa-->
+                            <div class="row">
+                                <!--Número de personas y ocasión-->
+                                <div class="col-sm-5">
+                                    <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Número de personas</span>
+                                        <!--select elemento que se utiliza para crear una lista desplegable-->
+                                        <select class="form-control" name="personas">
+                                            <!--La etiqueta Option define una opción en la lista de selección-->
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select><!--Se cierra la etiqueta de la lista-->
+                                        <span class="select-arrow"></span><!--span es un contenedor de línea que se 
+                                            utiliza para marcar una parte de un texto, acompañado del atributo class
+                                            "select-arrow"-->
+                                    </div><!--Se cierra el diseño de la fila número de persona-->
+                                </div><!--Finaliza la columna-->
+                                <!--Número de mesa-->
+                                <div class="col-sm-7">
+                                    <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Selecciona una ocasión</span>
+                                        <!--select elemento que se utiliza para crear una lista desplegable-->
+                                        <select class="form-control" name="ocasión">
+                                            <!--La etiqueta Option define una opción en la lista de selección-->
+                                            <option>Seleccione una ocación</option>
+                                            <option>Cumpleaños</option>
+                                            <option>Aniversario</option>
+                                            <option>Noche de cita</option>
+                                            <option>Comida de negocios</option>
+                                            <option>Celebración</option>
+                                            <option>Otra</option>
+                                        </select><!--Se cierra la etiqueta de la lista-->
+                                        <span class="select-arrow"></span><!--span es un contenedor de línea que se 
+                                            utiliza para marcar una parte de un texto, acompañado del atributo class
+                                            "select-arrow"-->
+                                    </div><!--Se cierra el diseño de la fila Seleccion de ocasión-->
+                                </div><!--Finaliza la columna-->
+                            </div><!--Finaliza la fila-->
+                            <!--Cuarta fila para fecha de reserva y horario-->
+                            <div class="row">
+                                <!--Fecha de reserva-->
+                                <div class="col-sm-5">
+                                     <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                    <div class="form-group">
+                                        <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                        <span class="form-label">Fecha de reserva</span>
+                                        <!--input especifica un campo de entrada donde el usuario puede ingresar datos
+                                        y placeholder es una indicación para el usuario y required indica al usuario
+                                    que el campo es obligatorio-->
+                                        <input class="form-control" type="date" name="fecha" required>
+                                    </div><!--Finaliza el diseño de Fecha de reserva-->
+                                </div><!--Finaliza la columna-->
+                                <!--se crea la columna de 7 para dividri la hora/minuto/pm-am-->
+                                <div class="col-sm-7">
+                                    <!--Se crea una fila-->
+                                    <div class="row">
+                                        <!--Se crea columna para la hora-->
+                                        <div class="col-sm-4">
+                                            <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                            <div class="form-group">
+                                                 <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                                <span class="form-label">Hora</span>
+                                                 <!--select elemento que se utiliza para crear una lista desplegable-->
+                                                <select class="form-control" name="hora">
+                                                    <!--La etiqueta Option define una opción en la lista de selección-->
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                </select><!--Se cierra la etiqueta de la lista-->
+                                                <!--span es un contenedor de línea que se 
+                                            utiliza para marcar una parte de un texto, acompañado del atributo class
+                                            "select-arrow"-->
+                                                <span class="select-arrow"></span>
+                                            </div><!--Finaliza el diseño de hora-->
+                                        </div><!--Cierra la columna-->
+                                        <!--Minutos-->
+                                        <!--Se crea columna para minuto-->
+                                        <div class="col-sm-4">
+                                            <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                            <div class="form-group">
+                                                <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                                <span class="form-label">Min</span>
+                                                <!--select elemento que se utiliza para crear una lista desplegable-->
+                                                <select class="form-control" name="minutos">
+                                                    <!--La etiqueta Option define una opción en la lista de selección-->
+                                                    <option>05</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                </select><!--Se cierra la etiqueta de la lista-->
+                                                <span class="select-arrow"></span><!--span es un contenedor de línea que se 
+                                                    utiliza para marcar una parte de un texto, acompañado del atributo class
+                                                    "select-arrow"-->
+                                            </div><!--Finaliza el diseño de minuto-->
+                                        </div><!--Se cierra la columna-->
+                                        <!--AM/PM-->
+                                        <div class="col-sm-4">
+                                            <!--Se crea la clase form-group para facilitar el ingreso de elementos en 
+                                        el formulario-->
+                                            <div class="form-group">
+                                                <!--span es un contenedor en línea que se utiliza para marcar una parte 
+                                        de un texto o una partde de un documento, acompañado de su atributo class-->
+                                                <span class="form-label">AM/PM</span>
+                                                <!--select elemento que se utiliza para crear una lista desplegable-->
+                                                <select class="form-control" name="horario">
+                                                    <!--La etiqueta Option define una opción en la lista de selección-->
+                                                    <option>AM</option>
+                                                    <option>PM</option>
+                                                </select><!--Se cierra la etiqueta de la lista-->
+                                                <span class="select-arrow"></span><!--span es un contenedor de línea que se 
+                                                    utiliza para marcar una parte de un texto, acompañado del atributo class
+                                                    "select-arrow"-->
+                                            </div><!--Finaliza el diseño de am/pm-->
+                                        </div><!--Se cierra la columna-->
+                                        <!--Cierra-->
+                                    </div><!--Se cierra la fila-->
+                                </div><!--Se cierra la columna-->
+                            </div><!--Se cierra la fila de fecha de reserva y horario-->
+                            <!--Quinta fila para el boton de reservación-->
+                            <!--div class define el estilo del botón en los estilos CSS-->
+                            <div class="form-btn">
+                                <!--submit-btn crea un botón de envio cuando es presionado, el formulario donde 
+                                se encuentra es automáticamente enviado-->
+                                <button class="submit-btn">Enviar Reservación
+                                </button><!--Finaliza el botón-->
+                            </div><!--Finaliza la clase form-btn-->
+                        </form><!--Se finaliza el formulario con el método POST-->
+                    </div><!--Finaliza la clase contenido-form-->
+                </div><!--Se finaliza la filaprincipal-->
+            </div><!--Se cierra la clase container-->
+        </div><!--Finaliza la agrupacion de elementos del bloque-->
+    </div><!--Se cierra el ID contenido-->
+</body><!--Finaliza el documento-->
+</html><!--Finaliza el HTML-->
